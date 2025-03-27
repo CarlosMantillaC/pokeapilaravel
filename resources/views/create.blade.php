@@ -4,7 +4,7 @@
 @section('content')
 
 <div class="container mx-auto p-4">
-    <a href="/" class="mb-4 inline-block dark:bg-gray-800 bg-blue-600 text-white px-4 py-2 rounded">
+    <a href="/" class="mb-4 inline-block theme-bg px-4 py-2 rounded">
         ← Volver a la lista
     </a>
 
@@ -13,14 +13,12 @@
         <form method="POST" action="{{ route('store') }}" class="max-w-2xl mx-auto bg-white dark:bg-gray-400/30 p-6 rounded-lg shadow-lg">
             @csrf
         
-            <!-- Campo Nombre -->
             <div class="mb-6">
                 <label class="block mb-2 text-gray-800 dark:text-gray-200 font-medium">Nombre del Pokémon:</label>
                 <input type="text" id="name" name="name" required
                     class="w-full p-3 border border-gray-300 dark:border-gray-800 dark:bg-gray-800 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-black dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 transition">
             </div>
         
-            <!-- Selector de Tipos -->
             <div class="mb-6">
                 <label class="block mb-2 text-gray-800 dark:text-gray-200 font-medium">Tipos:</label>
                 <div class="relative">
@@ -34,7 +32,6 @@
                 <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">Mantén presionado Ctrl (Windows) o Command (Mac) para seleccionar múltiples</p>
             </div>
         
-            <!-- Selector de Movimientos -->
             <div class="mb-6">
                 <label class="block mb-2 text-gray-800 dark:text-gray-200 font-medium">Movimientos:</label>
                 <div class="relative">
@@ -48,7 +45,6 @@
                 <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">Mantén presionado Ctrl (Windows) o Command (Mac) para seleccionar múltiples</p>
             </div>
         
-            <!-- URL de la Imagen -->
             <div class="mb-8">
                 <label class="block mb-2 text-gray-800 dark:text-gray-200 font-medium">URL de la Imagen:</label>
                 <input type="url" id="image_url" name="image_url" required
@@ -56,7 +52,7 @@
                     placeholder="https://example.com/pokemon-image.jpg">
             </div>
         
-            <button type="submit" class="w-full bg-green-600 hover:bg-green-700 dark:bg-green-700 dark:hover:bg-green-800 text-white font-bold py-3 px-4 rounded-lg shadow-md transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-50">
+            <button type="submit" class="w-full theme-bg font-bold py-3 px-4 rounded-lg shadow-md transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-opacity-50">
                 ¡Crear Pokémon!
             </button>
         </form>
