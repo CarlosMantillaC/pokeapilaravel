@@ -17,7 +17,7 @@
                     <div class="flex flex-col sm:flex-row items-start sm:items-center gap-2 w-full sm:w-auto">
                         <label for="sort_by" class="dark:text-white text-sm sm:text-base">Ordenar por:</label>
                         <select id="sort_by" name="sort_by" onchange="updateSort()"
-                            class="dark:bg-gray-700 dark:text-white rounded p-1 w-full sm:w-auto">
+                            class="dark:bg-gray-800 dark:text-white rounded p-1 w-full sm:w-auto">
                             <option value="id" {{ $sortBy == 'id' ? 'selected' : '' }}>Número</option>
                             <option value="name" {{ $sortBy == 'name' ? 'selected' : '' }}>Nombre</option>
                         </select>
@@ -26,7 +26,7 @@
                     <div class="flex flex-col sm:flex-row items-start sm:items-center gap-2 w-full sm:w-auto">
                         <label for="sort_order" class="dark:text-white text-sm sm:text-base">Orden:</label>
                         <select id="sort_order" name="sort_order" onchange="updateSort()"
-                            class="dark:bg-gray-700 dark:text-white rounded p-1 w-full sm:w-auto">
+                            class="dark:bg-gray-800 dark:text-white rounded p-1 w-full sm:w-auto">
                             <option value="asc" {{ $sortOrder == 'asc' ? 'selected' : '' }}>Ascendente</option>
                             <option value="desc" {{ $sortOrder == 'desc' ? 'selected' : '' }}>Descendente</option>
                         </select>
