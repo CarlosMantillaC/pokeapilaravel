@@ -17,6 +17,7 @@
                 class="w-full p-2 border rounded dark:bg-gray-700 dark:text-white">
         </div>
 
+
         <!-- Selector de Tipos (Múltiple) -->
         <div class="mb-6">
             <label class="block mb-2 text-gray-800 dark:text-white">Tipos:</label>
@@ -56,6 +57,10 @@
     document.getElementById('newPokemonForm').addEventListener('submit', (e) => {
         e.preventDefault();
 
+        // Obtener último número usado
+        let lastNumber = localStorage.getItem('lastPokemonNumber') || 1025;
+        lastNumber = parseInt(lastNumber);
+
         // Validar campos
         const name = document.getElementById('name').value.trim();
         const types = Array.from(document.getElementById('types').selectedOptions).map(o => o.value);
@@ -67,9 +72,12 @@
             return;
         }
 
+        // Generar nuevo número
+        const newNumber = lastNumber + 1;
+
         // Guardar en localStorage
         const newPokemon = {
-            id: Date.now(),
+            number: newNumber,
             name: name,
             types: types,
             moves: moves,
@@ -78,8 +86,8 @@
 
         const existingPokemons = JSON.parse(localStorage.getItem('pokemons')) || [];
         localStorage.setItem('pokemons', JSON.stringify([...existingPokemons, newPokemon]));
+        localStorage.setItem('lastPokemonNumber', newNumber); // Actualizar último número
 
-        // Redirigir al listado
         window.location.href = "{{ route('index') }}";
     });
 </script>

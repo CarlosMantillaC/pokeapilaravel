@@ -47,6 +47,7 @@
                 <div class="rounded-xl shadow p-4 my-4 text-center dark:bg-gray-400/30 bg-gray-100">
                     <img src="${pokemon.image_url}" class="w-full h-32 object-contain mb-4">
                     <h3 class="text-xl font-bold dark:text-white">${pokemon.name}</h3>
+                    <p class="dark:text-gray-400 text-gray-600">#${pokemon.number}</p>
                     <p class="dark:text-gray-400">Tipos: ${pokemon.types.join(', ')}</p>
                     <p class="dark:text-gray-400">Movimientos: ${pokemon.moves.join(', ')}</p>
                 </div>
