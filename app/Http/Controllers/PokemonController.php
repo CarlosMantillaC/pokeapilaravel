@@ -83,14 +83,7 @@ class PokemonController extends Controller
             $pokemon = [
                 'id' => $customPokemon['id'],
                 'name' => $customPokemon['name'],
-                'sprites' => [
-                    'front_default' => $customPokemon['image_url'],
-                    'other' => [
-                        'official-artwork' => [
-                            'front_default' => $customPokemon['image_url']
-                        ]
-                    ]
-                ],
+                'sprites' => $customPokemon['image_url'],
                 'types' => array_map(function ($type) {
                     return ['type' => ['name' => $type]];
                 }, $customPokemon['types']),
