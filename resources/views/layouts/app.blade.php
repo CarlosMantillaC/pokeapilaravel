@@ -18,7 +18,7 @@
 </head>
 
 <body>
-    <header class="dark:bg-gray-800 bg-blue-600 text-white p-4">
+    <header class="theme-bg p-4">
         <div class="flex justify-center items-center">
             <h1 class="text-3xl text-center font-bold p-5">
                 @yield('h1', 'PokeApi CM')
