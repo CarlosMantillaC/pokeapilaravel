@@ -30,7 +30,7 @@ Para iniciar el servidor de desarrollo:
 php artisan serve
 ```
 
-## Producción:
+## Producción
 
 ```bash
 npm run build
