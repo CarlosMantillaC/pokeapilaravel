@@ -20,6 +20,7 @@
 
 4. Ejecutar migraciones:
    ```bash
+   php artisan key:generate
    php artisan migrate
    ```
 
