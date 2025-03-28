@@ -28,6 +28,7 @@
 
 Para iniciar el servidor de desarrollo:
 ```bash
+npm run dev
 php artisan serve
 ```
 
